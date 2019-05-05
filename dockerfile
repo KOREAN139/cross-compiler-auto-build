@@ -8,6 +8,8 @@ RUN dpkg --add-architecture i386 \
 
 ADD arm-2014.05-29-arm-none-linux-gnueabi-i686-pc-linux-gnu.tar.bz2 /opt/toolchains/
 
+ENV PATH="/opt/toolchains/arm-2014.05/bin:${PATH}"
+
 WORKDIR /tmp
 
 ENTRYPOINT make
